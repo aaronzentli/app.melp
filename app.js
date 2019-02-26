@@ -30,3 +30,15 @@ if(CONFIG.app==='dev'){
     models.sequelize.sync();
 }
 
+// Permitir acceso desde fuera
+app.use(cors());
+
+// Rutas de la app para la versión 1
+app.use('/v1', v1);
+
+// Ruta por default
+app.use('/', function(req, res){
+	res.statusCode = 200;
+	res.json({status:"success", message:"Melp Restaurant API", data:{}})
+});
+
