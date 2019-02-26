@@ -17,3 +17,16 @@ app.use(passport.initialize());
 
 //Log Entorno
 console.log("Entorno:", CONFIG.app);
+
+//Base de datos
+const models = require("./models");
+models.sequelize.authenticate().then(() => {
+    console.log('conectando a la base de datos:', CONFIG.db_name);
+})
+.catch(err => {
+    console.error('Error en la conexión a la base de datos:',CONFIG.db_name, err);
+});
+if(CONFIG.app==='dev'){
+    models.sequelize.sync();
+}
+
