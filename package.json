@@ -1,0 +1,38 @@
+{
+  "name": "app.melp",
+  "version": "1.0.0",
+  "description": "REST API with CRUD operations",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronzentli/app.melp.git"
+  },
+  "author": "Aarón Zentli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronzentli/app.melp/issues"
+  },
+  "homepage": "https://github.com/aaronzentli/app.melp#readme",
+  "dependencies": {
+    "await-to-js": "^2.1.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "fast-csv": "^2.4.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "mysql2": "^1.6.5",
+    "parse-error": "^0.2.0",
+    "passport": "^0.4.0",
+    "path": "^0.12.7",
+    "sequelize": "^4.42.0"
+  }
+}
